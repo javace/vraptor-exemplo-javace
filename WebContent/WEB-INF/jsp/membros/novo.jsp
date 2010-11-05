@@ -8,24 +8,25 @@
 		<title>Cadastrar Membro</title>
 	</head>
 	<body>		
-			<span id="error" ><c:forEach var="error" items="${errors}">${error.message}</c:forEach></span>
+			<span id="error" >
+				<c:forEach var="error" items="${errors}"><li>${error.message}</li></c:forEach>
+			</span>
 			<span id="erros">${erros}</span>
 			<span id="notice">${notice}</span>
 		<form action="<c:url value="/novo/membro" />" name="form" method="post">
-		<input type="hidden" name="membro.id" value="{membro.id}" />
 					<div>
 						<label>
 							Nome
 						</label>						
 						<input type="text" name="membro.nome" id="nome" size="50" maxlength="50"
-							value="${param['membro.nome']}" />
+							value="" />
 					</div>
 					<div>
 						<label>
 							Email
 						</label>						
 						<input type="text" name="membro.email" size="50" maxlength="50"
-							value="${param['membro.email']}"/>
+							value=""/>
 					</div>
 					<input type="submit" value="Salvar" name="Salvar" />
 				</form>
