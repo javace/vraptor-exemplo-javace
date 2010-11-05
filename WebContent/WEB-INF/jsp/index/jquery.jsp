@@ -1,6 +1,6 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:set var="ctx">${pageContext.request.contextPath}</c:set>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -9,10 +9,6 @@
 </head>
 <body>
 	It works!! ${variavel}
-	<span id="ctx" style="display: none">
-			${ctx}
-	</span>
-	<div id="retornoAjax"></div>
 </body>
 		<script type="text/javascript" src="${ctx}/js/jquery/jquery-1.4.2.min.js"></script>
 		<script type="text/javascript" src="${ctx}/js/jquery/jquery-ui-1.8.4/js/jquery-ui-1.8.4.custom.min.js"></script>
