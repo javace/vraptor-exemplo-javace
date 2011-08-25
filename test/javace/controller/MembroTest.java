@@ -23,11 +23,11 @@ public class MembroTest {
 	@Mock
 	private Result result;
 	@Mock
+	private Validator validator;
+	@Mock
 	private MembrosDAO membrosDAO;
 	
 	private MembrosController controller;
-	
-	private Validator validator;
 	
 	@Before
 	public void setUp() {
