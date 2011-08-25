@@ -11,10 +11,12 @@ import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
 import br.com.caelum.vraptor.Result;
+import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.javace.controler.MembrosController;
 import br.com.caelum.vraptor.javace.dao.MembrosDAO;
 import br.com.caelum.vraptor.javace.model.Membro;
 import br.com.caelum.vraptor.util.test.MockResult;
+import br.com.caelum.vraptor.util.test.MockValidator;
 
 public class MembroTest {
 
@@ -25,11 +27,14 @@ public class MembroTest {
 	
 	private MembrosController controller;
 	
+	private Validator validator;
+	
 	@Before
 	public void setUp() {
 		MockitoAnnotations.initMocks(this);
 		result = new MockResult();
-		controller = new MembrosController(result, membrosDAO);
+		validator = new MockValidator();
+		controller = new MembrosController(result, membrosDAO, validator);
 	}
 	
 	@Test
